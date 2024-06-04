@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List Project</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url(marek-piwnicki-fgZO-k47XTQ-unsplash.jpg);
+        background-size: cover;
+    }
+    .todo-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 300px;
+        top: 50px;
+        box-shadow:  3px 3px 10px #dcf4f5;
+        animation: slideIn 1s forwards;
+    }
+
+    .todo-items{
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        animation: fadeIn 1s forwards;
+    }
+
+    .todo-value{
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    .todo-items:has(.todo-checkbox:checked){
+        color: rgb(166, 168, 168);
+        background-color: #eeeeee;
+        text-decoration-line: line-through;
+        order: 1;
+    }
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dcf4f5;
+    box-shadow: 0px 0px 2px 0px #ccf5f5 ;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  @keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+</style>
+<body>
+    <div class="todo-container">
+        <u><h1>To-Do-List</h1></u>
+        <div class="todo-items">
+            <input type="text" class="todo-value" placeholder="(empty)" value="Take the bins out">
+            <input type="checkbox" class="todo-checkbox">
+        </div>
+        <div class="todo-items">
+            <input type="text" class="todo-value" placeholder="(empty)" value="Take the bins out">
+            <input type="checkbox" class="todo-checkbox">
+        </div>
+        <div class="todo-items">
+            <input type="text" class="todo-value" placeholder="(empty)" value="Take the bins out">
+            <input type="checkbox" class="todo-checkbox">
+        </div>
+        <div class="todo-items">
+            <input type="text" class="todo-value" placeholder="(empty)" value="Take the bins out">
+            <input type="checkbox" class="todo-checkbox">
+        </div>
+        <div class="todo-items">
+            <input type="text" class="todo-value" placeholder="(empty)" value="Take the bins out">
+            <input type="checkbox" class="todo-checkbox">
+        </div>
+    </div>
+</body>
+</html>
